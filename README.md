@@ -12,8 +12,7 @@ To run (On Linux):\
 I have not coded this solution but this is how I would like to approach this problem. Since we have to find a mapping function, I would try to learn this mapping function by training using machine learning. Concretely, I would consider this as a multi-class classification problem for each of the three characters in the output. I am assuming that these characters fall in the range "A-Z", "a-z", "0-9". So essentially, it would be three classification problems with 62 possible classes(26 + 26 + 10).
 I would take a hypothesis function h(x) as sigmoid function\
 `(1 / (1 + e^(-z)))`\
-where `z = a*x + b`
-x is the values provided in column A.\
+where `z = a*x + b` and x is the values provided in column A.\
 Now the task is to find the optimal values of parameters a and b.
 To optimize these, the cross entropy loss function could be used\
 `J = (-1/m) * (y*log(z) + (1 - y)*log(z))`\
