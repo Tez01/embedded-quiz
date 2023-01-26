@@ -3,6 +3,8 @@
 
 #define MAX_STRING_LENGTH 100
 
+// Function: findMin
+// Returns minimum of the two numbers passed as argument
 int findMin(int a, int b)
 {
   if (a <= b) {
@@ -13,6 +15,8 @@ int findMin(int a, int b)
   }
 }
 
+// Function getPerfectSquares
+// Prints out all the largest squares formed from the dimensions passed in argument
 void getPerfectSquares(int remainingWidth, int remainingHeight)
 {
   while ((remainingHeight > 0) && (remainingWidth > 0)) {
@@ -38,9 +42,12 @@ void getPerfectSquares(int remainingWidth, int remainingHeight)
 
 void main()
 {
-  int n = 123;
-  int m = 10;
+  int n;
+  scanf("%d", &n);
+  int m;
+  scanf("%d", &m);
 
-  // Output array
-  getPerfectSquares(n, m);
+  if (n > 0 && m > 0) {
+    getPerfectSquares(n, m);
+  }
 }
